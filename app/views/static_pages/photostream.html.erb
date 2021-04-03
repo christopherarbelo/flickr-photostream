@@ -1,0 +1,8 @@
+<h1>Flickr Photo Widget</h1>
+
+<%= render 'search' %>
+
+<h2>Photostream</h2>
+<% @photos&.each do |photo| %>
+  <%= image_tag "https://live.staticflickr.com/#{photo.server}/#{photo.id}_#{photo.secret}.jpg" %><br>
+<% end %>
